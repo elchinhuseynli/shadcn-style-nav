@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Mobile Overlay -->
-    <div class="shad_mobile-overlay" id="mobileOverlay"></div>
+    <div class="shad_mobile-overlay" data-mobile-overlay></div>
 
     <!-- SVG Sprite -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -208,7 +208,7 @@
           MyBrand
         </a>
 
-        <ul class="shad_navbar-menu" id="desktopMenu">
+        <ul class="shad_navbar-menu" data-desktop-menu>
           <li class="shad_nav-item">
             <a href="#" class="shad_nav-link">
               <svg class="shad_icon" width="16" height="16">
@@ -230,7 +230,7 @@
                 <use href="#chevron-down"></use>
               </svg>
             </a>
-            <div class="shad_dropdown-menu" id="products-dropdown">
+            <div class="shad_dropdown-menu" data-dropdown-menu="products">
               <a href="#" class="shad_dropdown-item">
                 <svg class="shad_icon" width="16" height="16">
                   <use href="#zap"></use>
@@ -265,7 +265,7 @@
                 <use href="#chevron-down"></use>
               </svg>
             </a>
-            <div class="shad_dropdown-menu" id="resources-dropdown">
+            <div class="shad_dropdown-menu" data-dropdown-menu="resources">
               <a href="#" class="shad_dropdown-item">
                 <svg class="shad_icon" width="16" height="16">
                   <use href="#file-text"></use>
@@ -296,7 +296,7 @@
           </li>
         </ul>
 
-        <button class="shad_mobile-toggle" id="mobileToggle">
+        <button class="shad_mobile-toggle" data-mobile-toggle>
           <div class="shad_hamburger">
             <span class="shad_hamburger-line"></span>
             <span class="shad_hamburger-line"></span>

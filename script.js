@@ -66,7 +66,7 @@ class MobileMenu {
   constructor(toggleButton, menu) {
     this.toggleButton = toggleButton;
     this.menu = menu;
-    this.overlay = document.getElementById("mobileOverlay");
+    this.overlay = document.querySelector("[data-mobile-overlay]");
     this.isOpen = false;
     this.init();
   }
@@ -146,7 +146,9 @@ class Navbar {
     );
     dropdownTriggers.forEach((trigger) => {
       const dropdownId = trigger.dataset.dropdown;
-      const menu = document.getElementById(`${dropdownId}-dropdown`);
+      const menu = document.querySelector(
+        `[data-dropdown-menu="${dropdownId}"]`
+      );
       if (menu) {
         // Use hover for desktop, click for mobile
         const mode = window.innerWidth > 768 ? "hover" : "click";
@@ -156,8 +158,8 @@ class Navbar {
   }
 
   initializeMobileMenu() {
-    const toggleButton = document.getElementById("mobileToggle");
-    const navbarMenu = document.getElementById("desktopMenu");
+    const toggleButton = document.querySelector("[data-mobile-toggle]");
+    const navbarMenu = document.querySelector("[data-desktop-menu]");
     if (toggleButton && navbarMenu) {
       this.mobileMenu = new MobileMenu(toggleButton, navbarMenu);
     }
