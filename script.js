@@ -64,13 +64,33 @@ class MobileMenu {
   constructor(toggleButton, menu) {
     this.toggleButton = toggleButton;
     this.menu = menu;
+    this.overlay = document.getElementById("mobileOverlay");
     this.isOpen = false;
     this.init();
   }
 
   init() {
-    this.toggleButton.addEventListener("click", () => {
+    this.toggleButton.addEventListener("click", (e) => {
+      e.stopPropagation();
       this.toggle();
+    });
+
+    // Close when clicking on overlay
+    if (this.overlay) {
+      this.overlay.addEventListener("click", () => {
+        this.close();
+      });
+    }
+
+    // Close when clicking outside the menu
+    document.addEventListener("click", (e) => {
+      if (
+        this.isOpen &&
+        !this.menu.contains(e.target) &&
+        !this.toggleButton.contains(e.target)
+      ) {
+        this.close();
+      }
     });
 
     // Close mobile menu when window is resized to desktop
@@ -88,12 +108,18 @@ class MobileMenu {
   open() {
     this.menu.classList.add("active");
     this.toggleButton.classList.add("active");
+    if (this.overlay) {
+      this.overlay.classList.add("active");
+    }
     this.isOpen = true;
   }
 
   close() {
     this.menu.classList.remove("active");
     this.toggleButton.classList.remove("active");
+    if (this.overlay) {
+      this.overlay.classList.remove("active");
+    }
     this.isOpen = false;
   }
 }
