@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Mobile Overlay -->
-    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="shad_mobile-overlay" id="mobileOverlay"></div>
 
     <!-- SVG Sprite -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -199,132 +199,53 @@
       </defs>
     </svg>
 
-    <nav class="navbar">
-      <div class="navbar-container">
-        <a href="#" class="navbar-brand">
-          <svg class="icon" width="16" height="16">
+    <nav class="shad_navbar">
+      <div class="shad_navbar-container">
+        <a href="#" class="shad_navbar-brand">
+          <svg class="shad_icon" width="16" height="16">
             <use href="#sparkles"></use>
           </svg>
           MyBrand
         </a>
 
-        <ul class="navbar-menu" id="desktopMenu">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
+        <ul class="shad_navbar-menu" id="desktopMenu">
+          <li class="shad_nav-item">
+            <a href="#" class="shad_nav-link">
+              <svg class="shad_icon" width="16" height="16">
                 <use href="#home"></use>
               </svg>
               Home
             </a>
           </li>
-          <li class="nav-item dropdown-trigger" data-dropdown="products">
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
+          <li
+            class="shad_nav-item shad_dropdown-trigger"
+            data-dropdown="products"
+          >
+            <a href="#" class="shad_nav-link">
+              <svg class="shad_icon" width="16" height="16">
                 <use href="#package"></use>
               </svg>
               Products
-              <svg class="icon" width="16" height="16">
+              <svg class="shad_icon shad_chevron-icon" width="16" height="16">
                 <use href="#chevron-down"></use>
               </svg>
             </a>
-            <div class="dropdown-menu" id="products-dropdown">
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
+            <div class="shad_dropdown-menu" id="products-dropdown">
+              <a href="#" class="shad_dropdown-item">
+                <svg class="shad_icon" width="16" height="16">
                   <use href="#zap"></use>
                 </svg>
                 <span>Features</span>
               </a>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
+              <a href="#" class="shad_dropdown-item">
+                <svg class="shad_icon" width="16" height="16">
                   <use href="#pie-chart"></use>
                 </svg>
                 <span>Analytics</span>
               </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
-                  <use href="#settings"></use>
-                </svg>
-                <span>Settings</span>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown-trigger" data-dropdown="resources">
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
-                <use href="#book-open"></use>
-              </svg>
-              Resources
-              <svg class="icon" width="16" height="16">
-                <use href="#chevron-down"></use>
-              </svg>
-            </a>
-            <div class="dropdown-menu" id="resources-dropdown">
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
-                  <use href="#file-text"></use>
-                </svg>
-                <span>Documentation</span>
-              </a>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
-                  <use href="#video"></use>
-                </svg>
-                <span>Tutorials</span>
-              </a>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
-                  <use href="#users"></use>
-                </svg>
-                <span>Community</span>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
-                <use href="#phone"></use>
-              </svg>
-              Contact
-            </a>
-          </li>
-        </ul>
-
-        <ul class="navbar-menu mobile" id="mobileMenu">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
-                <use href="#home"></use>
-              </svg>
-              Home
-            </a>
-          </li>
-          <li class="nav-item dropdown-trigger" data-dropdown="products-mobile">
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
-                <use href="#package"></use>
-              </svg>
-              Products
-              <svg class="icon" width="16" height="16">
-                <use href="#chevron-down"></use>
-              </svg>
-            </a>
-            <div class="dropdown-menu" id="products-mobile-dropdown">
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
-                  <use href="#zap"></use>
-                </svg>
-                <span>Features</span>
-              </a>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
-                  <use href="#pie-chart"></use>
-                </svg>
-                <span>Analytics</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
+              <div class="shad_dropdown-divider"></div>
+              <a href="#" class="shad_dropdown-item">
+                <svg class="shad_icon" width="16" height="16">
                   <use href="#settings"></use>
                 </svg>
                 <span>Settings</span>
@@ -332,42 +253,42 @@
             </div>
           </li>
           <li
-            class="nav-item dropdown-trigger"
-            data-dropdown="resources-mobile"
+            class="shad_nav-item shad_dropdown-trigger"
+            data-dropdown="resources"
           >
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
+            <a href="#" class="shad_nav-link">
+              <svg class="shad_icon" width="16" height="16">
                 <use href="#book-open"></use>
               </svg>
               Resources
-              <svg class="icon" width="16" height="16">
+              <svg class="shad_icon shad_chevron-icon" width="16" height="16">
                 <use href="#chevron-down"></use>
               </svg>
             </a>
-            <div class="dropdown-menu" id="resources-mobile-dropdown">
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
+            <div class="shad_dropdown-menu" id="resources-dropdown">
+              <a href="#" class="shad_dropdown-item">
+                <svg class="shad_icon" width="16" height="16">
                   <use href="#file-text"></use>
                 </svg>
                 <span>Documentation</span>
               </a>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
+              <a href="#" class="shad_dropdown-item">
+                <svg class="shad_icon" width="16" height="16">
                   <use href="#video"></use>
                 </svg>
                 <span>Tutorials</span>
               </a>
-              <a href="#" class="dropdown-item">
-                <svg class="icon" width="16" height="16">
+              <a href="#" class="shad_dropdown-item">
+                <svg class="shad_icon" width="16" height="16">
                   <use href="#users"></use>
                 </svg>
                 <span>Community</span>
               </a>
             </div>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg class="icon" width="16" height="16">
+          <li class="shad_nav-item">
+            <a href="#" class="shad_nav-link">
+              <svg class="shad_icon" width="16" height="16">
                 <use href="#phone"></use>
               </svg>
               Contact
@@ -375,11 +296,11 @@
           </li>
         </ul>
 
-        <button class="mobile-toggle" id="mobileToggle">
-          <div class="hamburger">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
+        <button class="shad_mobile-toggle" id="mobileToggle">
+          <div class="shad_hamburger">
+            <span class="shad_hamburger-line"></span>
+            <span class="shad_hamburger-line"></span>
+            <span class="shad_hamburger-line"></span>
           </div>
         </button>
       </div>

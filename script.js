@@ -50,11 +50,13 @@ class Dropdown {
 
   open() {
     this.menu.classList.add("active");
+    this.trigger.classList.add("active");
     this.isOpen = true;
   }
 
   close() {
     this.menu.classList.remove("active");
+    this.trigger.classList.remove("active");
     this.isOpen = false;
   }
 }
@@ -138,36 +140,26 @@ class Navbar {
   }
 
   initializeDropdowns() {
-    // Initialize desktop dropdowns with hover
-    const desktopDropdownTriggers = document.querySelectorAll(
-      "#desktopMenu .dropdown-trigger"
+    // Initialize dropdowns - desktop hover, mobile click
+    const dropdownTriggers = document.querySelectorAll(
+      ".shad_dropdown-trigger"
     );
-    desktopDropdownTriggers.forEach((trigger) => {
+    dropdownTriggers.forEach((trigger) => {
       const dropdownId = trigger.dataset.dropdown;
       const menu = document.getElementById(`${dropdownId}-dropdown`);
       if (menu) {
-        this.dropdowns.push(new Dropdown(trigger, menu, "hover"));
-      }
-    });
-
-    // Initialize mobile dropdowns with click
-    const mobileDropdownTriggers = document.querySelectorAll(
-      "#mobileMenu .dropdown-trigger"
-    );
-    mobileDropdownTriggers.forEach((trigger) => {
-      const dropdownId = trigger.dataset.dropdown;
-      const menu = document.getElementById(`${dropdownId}-dropdown`);
-      if (menu) {
-        this.dropdowns.push(new Dropdown(trigger, menu, "click"));
+        // Use hover for desktop, click for mobile
+        const mode = window.innerWidth > 768 ? "hover" : "click";
+        this.dropdowns.push(new Dropdown(trigger, menu, mode));
       }
     });
   }
 
   initializeMobileMenu() {
     const toggleButton = document.getElementById("mobileToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    if (toggleButton && mobileMenu) {
-      this.mobileMenu = new MobileMenu(toggleButton, mobileMenu);
+    const navbarMenu = document.getElementById("desktopMenu");
+    if (toggleButton && navbarMenu) {
+      this.mobileMenu = new MobileMenu(toggleButton, navbarMenu);
     }
   }
 }
